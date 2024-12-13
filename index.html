@@ -7,97 +7,116 @@
     <style>
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             display: flex;
             align-items: center;
             justify-content: center;
             height: 100vh;
-            background: linear-gradient(to bottom right, #0d47a1, #1976d2);
-            color: white;
+            background: linear-gradient(to bottom right, #002b5c, #00509e);
+            color: #ffffff;
             text-align: center;
         }
         .container {
-            max-width: 800px;
+            max-width: 900px;
+            padding: 2em;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
         }
         h1 {
-            font-size: 3rem;
-            margin: 0.5em 0;
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
         }
         p {
             font-size: 1.25rem;
+            margin-bottom: 1.5rem;
         }
         .timer {
-            font-size: 2rem;
-            margin: 1em 0;
-        }
-        .social-icons {
-            margin-top: 1.5em;
-        }
-        .social-icons a {
-            text-decoration: none;
-            color: white;
-            font-size: 1.5rem;
-            margin: 0 10px;
-            transition: color 0.3s;
-        }
-        .social-icons a:hover {
+            font-size: 2.5rem;
+            margin: 1.5em 0;
+            font-weight: bold;
             color: #ffcc00;
         }
         .features {
             margin-top: 2em;
-            font-size: 1rem;
             text-align: left;
-            padding: 0 1em;
+            padding: 1em;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
         }
         .features h2 {
-            font-size: 1.5rem;
-            margin-bottom: 0.5em;
+            font-size: 2rem;
+            margin-bottom: 0.8em;
         }
         .features ul {
             list-style: none;
             padding: 0;
         }
         .features ul li {
-            margin: 0.5em 0;
-            padding-left: 1.5em;
+            margin: 0.8em 0;
+            padding-left: 1.8em;
             position: relative;
+            font-size: 1.1rem;
         }
         .features ul li::before {
-            content: '\2022';
+            content: '\2714';
             color: #ffcc00;
-            font-weight: bold;
-            display: inline-block;
-            width: 1em;
-            margin-left: -1.5em;
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+        }
+        .social-icons {
+            margin-top: 2em;
+        }
+        .social-icons a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 1.5rem;
+            margin: 0 15px;
+            transition: all 0.3s ease;
+        }
+        .social-icons a:hover {
+            color: #ffcc00;
+            transform: scale(1.1);
+        }
+        footer {
+            margin-top: 2em;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Our Next-Generation Algorithmic Trading Platform is Coming Soon!</h1>
-        <p>We're building an advanced, user-friendly platform to redefine algorithmic trading. Stay tuned for updates!</p>
+        <h1>Our Next-Generation Algorithmic Trading Platform</h1>
+        <p>Building the future of trading with advanced tools, AI, and powerful performance. Stay tuned for updates!</p>
 
         <div class="timer">
             <span id="countdown">Launching in...</span>
         </div>
 
         <div class="features">
-            <h2>What to Expect:</h2>
+            <h2>Features to Look Forward To:</h2>
             <ul>
-                <li>No programming required for creating trading algorithms.</li>
-                <li>Powerful back-testing with historical data.</li>
-                <li>AI explainability for insights into strategy performance.</li>
-                <li>Cross-platform compatibility: Windows, macOS, and Linux.</li>
-                <li>Scalable performance with GPU acceleration.</li>
+                <li>Code-free algorithm creation for all skill levels.</li>
+                <li>Comprehensive back-testing with historical data.</li>
+                <li>AI-driven insights and strategy explainability.</li>
+                <li>Cross-platform support: Windows, macOS, and Linux.</li>
+                <li>High-performance optimization with GPU acceleration.</li>
             </ul>
         </div>
 
-        <p>Want to stay updated? Follow us:</p>
         <div class="social-icons">
+            <p>Follow us for the latest updates:</p>
             <a href="https://twitter.com" target="_blank">Twitter</a>
             <a href="https://linkedin.com" target="_blank">LinkedIn</a>
             <a href="https://facebook.com" target="_blank">Facebook</a>
         </div>
+
+        <footer>
+            &copy; 2024 Khawarizmi Technologies. All rights reserved.
+        </footer>
     </div>
 
     <script>
