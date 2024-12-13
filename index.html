@@ -7,37 +7,73 @@
     <style>
         body {
             margin: 0;
-            padding: 20px;
             font-family: 'Roboto', sans-serif;
             min-height: 100vh;
-            background: linear-gradient(to bottom right, #000000, #1c1c1e);
+            background: radial-gradient(circle, #1c1c1e 0%, #000000 100%);
             color: #ffffff;
             display: flex;
             align-items: center;
             justify-content: center;
+            overflow: hidden;
+            perspective: 1000px;
         }
         .container {
             width: 100%;
-            max-width: 900px;
-            padding: 2em;
-            background: rgba(28, 28, 30, 0.8);
-            border-radius: 12px;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+            max-width: 800px;
+            padding: 2.5em;
+            background: rgba(28, 28, 30, 0.9);
+            border-radius: 16px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
             text-align: center;
+            animation: fadeIn 1.5s ease-in-out;
+            transform: rotateX(10deg) rotateY(-5deg);
         }
         h1 {
-            font-size: 2.5em;
-            margin-bottom: 0.5em;
-            color: #4CAF50;
+            font-size: 3em;
+            margin-bottom: 0.2em;
+            color: #4caf50;
+            letter-spacing: 2px;
+            text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
         }
         h2 {
-            font-size: 1.8em;
+            font-size: 2em;
             margin-bottom: 1em;
-            color: #ffffff;
+            color: #f1f1f1;
+            text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
         }
         p {
             font-size: 1.2em;
             line-height: 1.6;
+            color: #d1d1d6;
+        }
+        .animation {
+            font-size: 1.5em;
+            color: #ff9500;
+            margin-top: 1em;
+            animation: blink 1.5s infinite;
+            text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes blink {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+        }
+        .container:hover {
+            transform: rotateX(0deg) rotateY(0deg) scale(1.05);
+            transition: transform 0.5s ease-in-out;
         }
     </style>
 </head>
@@ -46,6 +82,7 @@
         <h1>Khawarizmi</h1>
         <h2>Under Construction</h2>
         <p>Our next-gen algorithmic trading platform is coming soon. Stay tuned!</p>
+        <div class="animation">Launching Soon...</div>
     </div>
 </body>
 </html>
