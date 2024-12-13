@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Under Construction | Next-Gen Algorithmic Trading Platform</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: linear-gradient(to bottom right, #0d47a1, #1976d2);
+            color: white;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+        }
+        h1 {
+            font-size: 3rem;
+            margin: 0.5em 0;
+        }
+        p {
+            font-size: 1.25rem;
+        }
+        .timer {
+            font-size: 2rem;
+            margin: 1em 0;
+        }
+        .social-icons {
+            margin-top: 1.5em;
+        }
+        .social-icons a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        .social-icons a:hover {
+            color: #ffcc00;
+        }
+        .features {
+            margin-top: 2em;
+            font-size: 1rem;
+            text-align: left;
+            padding: 0 1em;
+        }
+        .features h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5em;
+        }
+        .features ul {
+            list-style: none;
+            padding: 0;
+        }
+        .features ul li {
+            margin: 0.5em 0;
+            padding-left: 1.5em;
+            position: relative;
+        }
+        .features ul li::before {
+            content: '\2022';
+            color: #ffcc00;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1.5em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Our Next-Generation Algorithmic Trading Platform is Coming Soon!</h1>
+        <p>We're building an advanced, user-friendly platform to redefine algorithmic trading. Stay tuned for updates!</p>
+
+        <div class="timer">
+            <span id="countdown">Launching in...</span>
+        </div>
+
+        <div class="features">
+            <h2>What to Expect:</h2>
+            <ul>
+                <li>No programming required for creating trading algorithms.</li>
+                <li>Powerful back-testing with historical data.</li>
+                <li>AI explainability for insights into strategy performance.</li>
+                <li>Cross-platform compatibility: Windows, macOS, and Linux.</li>
+                <li>Scalable performance with GPU acceleration.</li>
+            </ul>
+        </div>
+
+        <p>Want to stay updated? Follow us:</p>
+        <div class="social-icons">
+            <a href="https://twitter.com" target="_blank">Twitter</a>
+            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+            <a href="https://facebook.com" target="_blank">Facebook</a>
+        </div>
+    </div>
+
+    <script>
+        // Countdown Timer Script
+        const launchDate = new Date('2024-03-01T00:00:00').getTime();
+        const countdownElement = document.getElementById('countdown');
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const timeRemaining = launchDate - now;
+
+            if (timeRemaining <= 0) {
+                countdownElement.textContent = "We're live!";
+                return;
+            }
+
+            const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+            countdownElement.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+        }
+
+        setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>
